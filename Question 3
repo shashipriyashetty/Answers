@@ -1,0 +1,30 @@
+Write a program to determine the Area and Perimeter of a Rectangle  //Sonal
+
+#include<iostream>
+using namespace std;
+
+int main()
+
+{
+
+    int w,h,a,p;
+
+    cout<<"Enter  Width of Rectangle = ";
+
+    cin>>w
+
+    cout<<"Enter  Height of Rectangle = ";
+
+    cin>>h;
+
+    a=h*w;
+
+    cout<<"Area of Rectangle ="<<a<<endl;
+
+    p=2*(h+w);
+
+cout<<" Perimeter of rectangle are = "<<p<<endl;
+
+return 0;
+
+}
