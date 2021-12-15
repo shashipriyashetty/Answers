@@ -1,0 +1,88 @@
+Question Title :Temperature converison // Naveen
+
+C++ program for temperature converison using switch conditions only and use setprecision to display the output temperature.
+
+convert given temperature of celcius to fahrenheit.
+formula: fahrenheit=(celsius*9/5)+32;
+
+convert given fahrenheit to celcius.
+formula: celcius = (fahrenheit-32)*5/9;
+
+========================================================================== Output-1:
+
+Select to convert Celcius to Fahrenheit:
+Select to convert Fahrenheit to Celcius:
+Select to Exit:
+===================================================== Enter your Choice: 1
+Enter the Temperature in Celcius: 37
+Temperature in Fahrenheit is: 98.6
+
+Output-2:
+
+Select to convert Celcius to Fahrenheit:
+Select to convert Fahrenheit to Celcius:
+Select to Exit: ===================================================== Enter your Choice: 2 ===================================================== Enter the Temperature in Fahrenheit: 97.2 ===================================================== Temperature in Celcius is: 36.2
+Output-3:
+
+Select to convert Celcius to Fahrenheit:
+Select to convert Fahrenheit to Celcius:
+Select to Exit: ===================================================== Enter your Choice: 3 ===================================================== You Exited:
+Output-4:
+
+Select to convert Celcius to Fahrenheit:
+Select to convert Fahrenheit to Celcius:
+Select to Exit: ===================================================== Enter your Choice: 4 ===================================================== You have entered invalid Choice:
+
+Solution:
+#include <iostream>
+#include <string>
+#include <cctype>
+#include <cstring>
+#include <iomanip>
+ 
+using namespace std;
+ 
+int main() 
+{
+    
+    cout<<"1. Select to convert Celcius to Fahrenheit: "<<endl;
+    cout<<"2. Select to convert Fahrenheit to Celcius: "<<endl;
+    cout<<"3. Select to Exit: "<<endl;
+    cout<<"====================================================="<<endl;
+    
+    int choice;
+    cout<<"Enter your Choice: ";
+    cin>>choice;
+    cout<<"====================================================="<<endl;
+    
+    switch(choice)
+    {
+    double celcius,fahrenheit;
+    case 1:
+    cout<<"Enter the Temperature in Celcius: ";
+    cin>>celcius;
+    fahrenheit = (celcius*9/5)+32;
+    cout<<fixed<<setprecision(1);
+    cout<<"====================================================="<<endl;
+    cout<<"Temperature in Fahrenheit is: "<<fahrenheit<<endl;
+    break;
+
+    case 2:
+    cout<<"Enter the Temperature in Fahrenheit: ";
+    cin>>fahrenheit;
+    celcius = (fahrenheit-32)*5/9;
+    cout<<fixed<<setprecision(1);
+    cout<<"====================================================="<<endl;
+    cout<<"Temperature in Celcius is: "<<celcius<<endl;
+    break;
+
+    case 3:
+    cout<<" You Exited:"<<endl;
+    exit(0);
+
+    default:
+    cout<<"You have entered invalid Choice:";             
+    }
+    return 0;
+ }
+  
