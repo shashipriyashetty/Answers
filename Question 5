@@ -1,0 +1,57 @@
+Given string with multiple characters that are repeated consecutively. You’re supposed to reduce the size of this string given as in the example below :
+Input :
+aabbbbeeeeffggg
+Output:
+a2
+b4
+e4
+f2
+g3 //Kavya
+
+Solution:
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    char str[100];
+    cin>> str;
+    int i, j, k=0, count = 0;
+    char str1[100];
+    for(i=0; str[i]!='\0'; i++)
+    {
+        count = 0;
+        for(j=0; j<=i; j++)
+        {
+            if(str[i]==str[j])
+            {
+                count++;
+            }
+        }
+        if(count==1)
+        {
+            str1[k] = str[i];
+            k++;
+        }
+    }
+    for(i=0; i<k; i++)
+    {
+        count = 0;
+        for(j=0; str[j]!='\0'; j++)
+        {
+            if(str1[i]==str[j])
+            {
+                count++;
+            }
+        }
+        if(count==1)
+        {
+            cout<< str1[i]<< endl;
+        }
+        else
+        {
+            cout<< str1[i] << count<< endl;
+        }
+    }
+    return 0;
+}
