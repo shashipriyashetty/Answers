@@ -1,0 +1,33 @@
+Write a program to copy a string to another string . 
+Note: 1. Use pointers to write this code. 
+Note: 2. Use while loop only. 
+Note: 3. Program should copy an entrire sentence not only a word. 
+Example: 
+Input 1 - Word 
+Output 1 - Word 
+Input 2 - This is a sentence. 
+Output 2 - This is a sentence. /'/Nishanth
+
+
+Solution:  
+
+#include<iostream> 
+#include<stdio.h> 
+using namespace std; 
+int main() 
+{ 
+    char strOrig[100], strCopy[100], i=0; 
+    cout<<"Enter the string: "; 
+    gets(strOrig); 
+    while(strOrig[i]!='\0') 
+    { 
+        strCopy[i] = strOrig[i]; 
+        i++; 
+    } 
+    strCopy[i] = '\0'; 
+    cout<<strOrig<<endl; 
+    cout<<strCopy<<endl; 
+    cout<<endl; 
+    return 0; 
+
+} 
