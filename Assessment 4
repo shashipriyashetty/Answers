@@ -127,14 +127,8 @@ using namespace std;
 int main()
 {
 
-
-
-// empty map container
 map<int, int> m;
 
-
-
-// insert elements in random order
 m.insert(pair<int, int>(1, 40));
 m.insert(pair<int, int>(2, 30));
 m.insert(pair<int, int>(3, 60));
@@ -155,10 +149,6 @@ cout << '\t' << itr->first << '\t' << itr->second
 }
 cout << endl;
 
-
-
-
-// lower bound and upper bound for map
 cout << "m.lower_bound(5) : "
 << "\tKEY = ";
 cout << m.lower_bound(5)->first << '\t';
